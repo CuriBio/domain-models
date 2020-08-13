@@ -5,16 +5,16 @@ from setuptools import setup
 
 
 setup(
-    name="change_this_to_name_of_package",
+    name="domain_models",
     version="0.1",
-    description="CREATE A DESCRIPTION",
-    url="https://github.com/CuriBio/CHANGE_THIS_TO_NAME_OF_REPO",
+    description="Persisting objects.",
+    url="https://github.com/CuriBio/domain-models",
     author="Curi Bio",
     author_email="contact@curibio.com",
     license="MIT",
     packages=find_packages("src"),
     package_dir={"": "src"},
-    install_requires=[],
+    install_requires=["immutable_data_validation>=0.2.1"],
     zip_safe=False,
     include_package_data=True,
     classifiers=[
