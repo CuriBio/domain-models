@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name="domain_models",
-    version="0.1",
+    version="0.3",
     description="Persisting objects.",
     url="https://github.com/CuriBio/domain-models",
     author="Curi Bio",
