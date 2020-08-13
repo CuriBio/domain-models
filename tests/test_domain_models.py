@@ -37,6 +37,14 @@ class SubclassedDomainModel2(DomainModel):
     pass
 
 
+class DomainModelWithNumber(DomainModel):
+    _hash_attribute_names = ("number",)
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.number = 0
+
+
 def test_DomainModel_persist_calls_validate(mocker):
     m = DomainModel()
     m.add_persistence_model(DummyPersister())
@@ -196,9 +204,7 @@ def test_DomainModel_validate_hash_components_calls_autopopulate_by_default(mock
 
 
 def test_DomainModel__hash__calls_validate_hash_components(mocker):
-    m = DomainModel()
-    m.number = 0
-    m._hash_attribute_names = ("number",)  # pylint: disable=protected-access
+    m = DomainModelWithNumber()
     spied_validate_hash = mocker.spy(m, "validate_hash_components")
     hash(m)
     assert spied_validate_hash.call_count == 1
