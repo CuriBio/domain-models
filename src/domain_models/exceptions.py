@@ -27,8 +27,7 @@ class NoSpecifiedTypeOfPersistenceModelAttachedError(Exception):
 
 class DomainModelValidationError(Exception):
     def __init__(self, msg: str = None, append_text: str = None) -> None:
-        if append_text is not None:
-            msg = f"{msg} {append_text}"
+        msg = f"{msg} {append_text}"
         super().__init__(msg)
 
 

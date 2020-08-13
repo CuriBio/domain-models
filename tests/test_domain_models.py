@@ -86,6 +86,17 @@ def test_validate_domain_model_does_not_autopopulated_if_disabled(mocker):
     assert spied_autopopulate.call_count == 0
 
 
+def test_validate_domain_model_does_not_autopopulated_if_disabled_and_validate_is_disabled(
+    mocker,
+):
+    m = DomainModel()
+    spied_validate = mocker.spy(m, "validate")
+    spied_autopopulate = mocker.spy(m, "autopopulate")
+    validate_domain_model(m, autopopulate=False, validate=False)
+    assert spied_validate.call_count == 0
+    assert spied_autopopulate.call_count == 0
+
+
 def test_validate_domain_model_raises_error_if_not_domain_model():
     with pytest.raises(ObjectNotDomainModelError) as e:
         validate_domain_model(27, extra_error_msg="blah19")
