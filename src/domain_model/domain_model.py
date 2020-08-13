@@ -90,10 +90,6 @@ class DomainModel:
             raise NoPersistenceModelAttachedError()
         self._persist_additional_models()
         for this_persistence_model in self._persistence_models:
-            if not hasattr(this_persistence_model, "persist"):
-                raise NotImplementedError(
-                    "all objects use as persistance models should have attribute 'persist'"
-                )
             this_persistence_model.persist(self)
 
 
