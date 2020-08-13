@@ -5,10 +5,10 @@ from setuptools import setup
 
 
 setup(
-    name="domain_models",
+    name="domain_model",
     version="0.3",
     description="Persisting objects.",
-    url="https://github.com/CuriBio/domain-models",
+    url="https://github.com/CuriBio/domain-model",
     author="Curi Bio",
     author_email="contact@curibio.com",
     license="MIT",

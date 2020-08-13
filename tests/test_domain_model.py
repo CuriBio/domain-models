@@ -3,15 +3,15 @@ from typing import Optional
 from uuid import UUID
 from uuid import uuid4
 
-from domain_models import DomainModel
-from domain_models import DomainModelWithUuid
-from domain_models import HashAttributesNotSpecifiedForClassError
-from domain_models import InvalidDomainModelSubclassError
-from domain_models import NoPersistenceModelAttachedError
-from domain_models import NoSpecifiedTypeOfPersistenceModelAttachedError
-from domain_models import ObjectIsNullError
-from domain_models import ObjectNotDomainModelError
-from domain_models import validate_domain_model
+from domain_model import DomainModel
+from domain_model import DomainModelWithUuid
+from domain_model import HashAttributesNotSpecifiedForClassError
+from domain_model import InvalidDomainModelSubclassError
+from domain_model import NoPersistenceModelAttachedError
+from domain_model import NoSpecifiedTypeOfPersistenceModelAttachedError
+from domain_model import ObjectIsNullError
+from domain_model import ObjectNotDomainModelError
+from domain_model import validate_domain_model
 from immutable_data_validation.errors import ValidationCollectionEmptyValueError
 import pytest
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Models for basic business/domain logic."""
-from .domain_models import DomainModel
-from .domain_models import DomainModelWithUuid
-from .domain_models import HashAttributesNotSpecifiedForClassError
-from .domain_models import validate_domain_model
+from .domain_model import DomainModel
+from .domain_model import DomainModelWithUuid
+from .domain_model import HashAttributesNotSpecifiedForClassError
+from .domain_model import validate_domain_model
 from .exceptions import InvalidDomainModelSubclassError
 from .exceptions import NoPersistenceModelAttachedError
 from .exceptions import NoSpecifiedTypeOfPersistenceModelAttachedError
